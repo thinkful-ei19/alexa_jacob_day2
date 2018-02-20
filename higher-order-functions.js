@@ -54,9 +54,34 @@ function filter(arr, fn) {
 
 // const filteredNames = filter( (myNames, function(name)) => console.log(name[0]=== 'R');
 
+// HAZARD WANING CREATOR
 
+/*
+function hazardWarningCreator(typeOfWarning) {
+    let warningCounter = 0;
+    if (warningCounter === 0) {
+        return function(location) {
+            warningCounter++;
+            console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);
+            console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time today!`);
+        };
+    }
+    else return function(location) {
+        warningCounter++;
+        console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);
+        console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} times today!`);
+    };
+}
 
+const rockWarning = hazardWarningCreator("Rocks on the road");
+const earthquake = hazardWarningCreator("Warning theres an earthquake");
+const hurricane = hazardWarningCreator("Warning a hurricane is coming");
 
+rockWarning("6th ave");
 
+earthquake("Tibet");
 
+hurricane("Florida");
 
+earthquake("alaska");
+*/
