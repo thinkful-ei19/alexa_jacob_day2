@@ -86,7 +86,7 @@ hurricane("Florida");
 earthquake("alaska");
 */
 
-
+/*
 
 function turtleMoves(array) {
     let sum = 0;
@@ -95,10 +95,21 @@ function turtleMoves(array) {
 }
 
 console.log(turtleMoves([[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]));
-
+*/
 
 // function turtleMoves(array) {
 //     return array.filter(num => num < 0 );
 // }
 // console.log(turtleMoves([0 , 1, 2, -1, -4]));
 
+function decode(accumulator, word) {
+       if (word.length === 3) {
+        return accumulator + " ";
+       }
+       else {
+        return accumulator + word[word.length-1].toUpperCase();
+       }
+}
+
+const words = "noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest".split(" ");
+console.log(words.reduce(decode,""));
