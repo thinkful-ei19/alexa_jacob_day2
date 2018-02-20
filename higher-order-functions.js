@@ -1,16 +1,62 @@
-const repeat = function(fn, num) {
-    for (let i = 0; i < num; i++) {
-        console.log(fn);
+// const repeat = function(fn, num) {
+//     for (let i = 0; i < num; i++) {
+//         console.log(fn);
+//     }
+// };
+
+// function hello() {
+//     return 'Hello World';
+// }
+
+// function goodbye() {
+//     return 'Goodbye World';
+// }
+
+// repeat(hello(), 5);
+// repeat(goodbye(), 5);
+
+
+
+
+
+// DO NOT EDIT BETWEEN THESE LINES ----->
+// Return only names that begin with 'R'
+const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
+
+const filteredNames = filter(myNames, function(name) {
+    // This is a "predicate function" - it's a function that only returns a boolean
+    return name[0] === 'R';
+});
+
+console.log(filteredNames) // => ['Rich', 'Ray']
+// <---- DO NOT EDIT BETWEEN THESE LINES
+
+// TASK: DEFINE YOUR FILTER FUNCTION BELOW:
+function filter(arr, fn) {
+    const newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+      if(fn(arr[i]) === true) {
+        newArr.push(arr[i]);
+      } 
     }
-};
-
-function hello() {
-    return 'Hello World';
+    return newArr;
 }
 
-function goodbye() {
-    return 'Goodbye World';
-}
+//filter(myNames);
 
-repeat(hello(), 5);
-repeat(goodbye(), 5);
+//BONUS ??
+// const filteredNames = filter(myNames, function(name) {
+//     // This is a "predicate function" - it's a function that only returns a boolean
+//     return name[0] === 'R';
+// });
+
+// console.log(filteredNames) // => ['Rich', 'Ray']
+
+// const filteredNames = filter( (myNames, function(name)) => console.log(name[0]=== 'R');
+
+
+
+
+
+
+
