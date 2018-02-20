@@ -21,26 +21,26 @@
 
 // DO NOT EDIT BETWEEN THESE LINES ----->
 // Return only names that begin with 'R'
-const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
+// const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
 
-const filteredNames = filter(myNames, function(name) {
-    // This is a "predicate function" - it's a function that only returns a boolean
-    return name[0] === 'R';
-});
+// const filteredNames = filter(myNames, function(name) {
+//     // This is a "predicate function" - it's a function that only returns a boolean
+//     return name[0] === 'R';
+// });
 
-console.log(filteredNames) // => ['Rich', 'Ray']
-// <---- DO NOT EDIT BETWEEN THESE LINES
+// console.log(filteredNames) // => ['Rich', 'Ray']
+// // <---- DO NOT EDIT BETWEEN THESE LINES
 
-// TASK: DEFINE YOUR FILTER FUNCTION BELOW:
-function filter(arr, fn) {
-    const newArr = [];
-    for (let i = 0; i < arr.length; i++) {
-      if(fn(arr[i]) === true) {
-        newArr.push(arr[i]);
-      } 
-    }
-    return newArr;
-}
+// // TASK: DEFINE YOUR FILTER FUNCTION BELOW:
+// function filter(arr, fn) {
+//     const newArr = [];
+//     for (let i = 0; i < arr.length; i++) {
+//       if(fn(arr[i]) === true) {
+//         newArr.push(arr[i]);
+//       } 
+//     }
+//     return newArr;
+// }
 
 //filter(myNames);
 
@@ -85,3 +85,20 @@ hurricane("Florida");
 
 earthquake("alaska");
 */
+
+
+
+function turtleMoves(array) {
+    let sum = 0;
+    array.filter( (num) => num[0] >= 0 && num[1] >= 0).map(num => num[0] + num[1]).forEach( (num) => sum += num); //sum = sum + num
+    return sum;
+}
+
+console.log(turtleMoves([[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]));
+
+
+// function turtleMoves(array) {
+//     return array.filter(num => num < 0 );
+// }
+// console.log(turtleMoves([0 , 1, 2, -1, -4]));
+
